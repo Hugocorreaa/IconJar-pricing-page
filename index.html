@@ -8,6 +8,8 @@
     <link rel="shortcut icon" href="imagens/favicon32.png" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
 
+
+
 </head>
 <body>
     <div id="bg">
@@ -52,14 +54,15 @@
 
                         <div id="once">
                             <input type="radio" id="onc" name="bolinha">
-                            <label for="onc">Once</label>
+                            <label for="onc">Once <p></p></label>
                             <p>Lifetime for €69.99</p>
                         </div>
 
                         <div id="upgrading">
-                            <input type="checkbox" id="checkbox" onclick="inputUp()">
+                            <input type="checkbox" id="checkbox">
                             <label for="checkbox">I'm upgrading from IconJar v1</label>
-                            <input type="text" id="id">
+                            <input type="text" id="id" class="visivel">
+                            <input type="text" id="inv" class="invisivel">
                         </div>
 
                     </div>
@@ -70,9 +73,27 @@
 
                     </div>
                 </div>
-
+                <!-- ============ TEXTO DA DIREITA ============= -->
                 <div id="textinho">
 
+                    <div id="checkout">
+                        <img src="imagens/safe.svg" alt="">
+                        <h2>Securely checkout with</h2>
+                        <p>We trust Paddle for handling the entire end-to-end checkout flow. From buying a license to receiving it in your email inbox!</p>
+                        
+
+                    </div>
+
+                    <div id="frequente">
+                        <img src="imagens/update.svg" alt="">
+                        <h2>Receive frequent updates</h2>
+                        <p>IconJar is actively under development, and we listen carefully to your feedback to evolve our product.</p>
+
+                    </div>
+
+                    <div>
+
+                    </div>
 
                 </div>
 
@@ -90,7 +111,11 @@
     </footer>
 
     <!-- =================== SCRIPTS ===================== -->
-
+    <script>
+        ckeckbox.addEventListener('change', function () {
+        spaceBlack.classList.add('visivel');
+        spaceBlack.classList.remove('invisivel')});
+    </script>
     <script src="inputUp.js"></script>
 
 </body>
