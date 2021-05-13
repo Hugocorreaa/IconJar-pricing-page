@@ -48,30 +48,28 @@
 
                         <div id="anually">
                             <input type="radio" id="anu" name="bolinha" checked>
-                            <label for="anu">Anually</label>
-                            <p>€29.99 now, then €24.99/year</p>
+                            <label for="anu" >Anually<p>€29.99 now, then €24.99/year</p></label>
+
                         </div>
 
                         <div id="once">
-                            <input type="radio" id="onc" name="bolinha">
-                            <label for="onc">Once <p></p></label>
-                            <p>Lifetime for €69.99</p>
+                            <input type="radio" id="onc" name="bolinha" >
+                            <label for="onc">Once<p>Lifetime for €69.99</p></label>
                         </div>
 
                         <div id="upgrading">
-                            <input type="checkbox" id="checkbox">
+                            <input type="checkbox" id="checkbox" onclick="mostrar()">
                             <label for="checkbox">I'm upgrading from IconJar v1</label>
-                            <input type="text" id="id" class="visivel">
                             <input type="text" id="inv" class="invisivel">
                         </div>
+                        
+                        <div id="form-email">
+                            <p>Quantity</p>
+                            <p>Email adress</p>
 
+                        </div>
                     </div>
 
-                    <div id="form-email">
-                        <p>Quantity</p>
-                        <p>Email adress</p>
-
-                    </div>
                 </div>
                 <!-- ============ TEXTO DA DIREITA ============= -->
                 <div id="textinho">
@@ -88,35 +86,23 @@
                         <img src="imagens/update.svg" alt="">
                         <h2>Receive frequent updates</h2>
                         <p>IconJar is actively under development, and we listen carefully to your feedback to evolve our product.</p>
-
                     </div>
-
-                    <div>
-
+                    
+                    <div> 
                     </div>
-
                 </div>
-
-    
-    
             </div>
+
     
         </main>
 
     </div>
 
 
-    <footer>
-
-    </footer>
 
     <!-- =================== SCRIPTS ===================== -->
-    <script>
-        ckeckbox.addEventListener('change', function () {
-        spaceBlack.classList.add('visivel');
-        spaceBlack.classList.remove('invisivel')});
-    </script>
-    <script src="inputUp.js"></script>
+    <!-- == Monstrar input text / Mudar Background de Payment method == -->
+    <script src="showInput.js"></script>
 
 </body>
 </html>
