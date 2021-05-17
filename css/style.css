@@ -3,6 +3,7 @@
 *{
     margin: 0;
     padding: 0;
+    
 }
 
 
@@ -15,6 +16,7 @@ ul{
     list-style-type: none;
 }
 
+
 body{
     background: linear-gradient(rgb(43, 44, 45) 0%, rgb(52, 54, 57) 100%) 0% 0% / 100% 500px no-repeat rgb(52, 54, 57);
     background-repeat: no-repeat;
@@ -22,10 +24,13 @@ body{
     font-family: sans-serif;
     
     color: #EBEBEB;
-    /* color: rgba(255, 255, 255, 0.75); */
-    text-size-adjust: 100%;
 
-    height: 200vh;
+    height: 150vh;
+}
+
+
+#bg{
+    height: 100%;
 }
 
 /* ================== CONFIGURAÇÕES ================== */
@@ -69,12 +74,21 @@ header{
     font-size: 13px;
 }
 
+/* ======= NAV MOBILE ======= */
+
+
+#h-mobile{
+    display: none;
+}
+
+#nav-mobile{
+    display: none;
+    line-height: 50px;
+}
+
 /* ========= MAIN ========= */
 
 main h1{
-
-    /* margin-top: 15px; */
-    
     text-align: center;
 
     font-weight: 900;
@@ -89,13 +103,13 @@ main h3{
 
 main #container{
     display: flex;
-
-    
     justify-content:flex-end;
+
+    height: 100vh;
+    
 }
 
 main #container-form{
-
 
     background: rgb(44, 44, 46);
 
@@ -109,7 +123,7 @@ main #container-form{
     
 
     width: 370px;
-    height: 320px;
+    height: 350px;
 }
 
 
@@ -141,7 +155,7 @@ main #anually input{
 main #anually label{
     float: right;
 
-    width: 300px;
+    width: 90%;
     height: 30px;
 }
 
@@ -171,7 +185,7 @@ main #once label{
 
     float: right;
 
-    width: 300px;
+    width: 90%;
     height: 30px;
 
 }
@@ -190,7 +204,7 @@ main #upgrading #inv{
     border-color: rgba(124, 125, 126, 0.123);
 
 
-    width: 345px;
+    width: 95%;
     height: 35px;
 
     margin-top: 15px;
@@ -210,9 +224,6 @@ main #upgrading #inv{
 
 main #form-email{
 
-    display: flex;
-    
-    justify-content: space-around;
 
     background-color: #272828;
 
@@ -222,15 +233,107 @@ main #form-email{
 
     margin-top: 20px;
     margin-left: -33px;
+    margin-right: -33px;
     
-    height: 200px;
-    width: 436px;
+    height: 250px;
 
+}
+
+main #quantity-email{
+    
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    
+
+    width: 100%;
+    height: 85px;
+
+    margin-top: 15px;
+    margin-left: 30px;
+
+    line-height: 20px;
+    font-weight: 700;
+}
+
+main #quantity-email #labelQuantity{
+    
+    height: fit-content;
+}
+
+main #quantity-email #e-mail{
+
+
+    width: 60%;
+    
+    height: fit-content;
+}
+
+main #quantity-email input{
+
+    border-radius: 5px;
+    border-style: solid;
+    border-color: rgba(124, 125, 126, 0.123);
+
+    height: 35px;
+
+    margin-top: 10px;
+
+    background-color: #373839;
+    color: white;
+    
+    font-size: 15px;
+    font-weight: 400;
+}
+
+main #quantity-email #quantity{
+
+    width: 50px;
+    
+    padding-right: 20px;
+    padding-left: 10px;
+}
+
+main #quantity-email #email{
+    width: 55%;
+
+    padding-left: 10px;
 }
 
 main #form-email p{
-    margin-top: 30px;
+    margin-top: 20px;
+    width: 80%;
+
+    line-height: 21.6px;
 }
+
+main #form-email p a{
+    color: #3983ac;
+
+}
+
+main #form-email button{
+    cursor: pointer;
+
+    border: 1px solid #73C333;
+    border-radius: 5px;
+
+    color: white;
+    background-color: #73C333;
+
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 42px;
+
+    width: 82%;
+    height: 40px;
+    
+    margin-top: 10px;
+    margin-left: 40px;
+}
+
+
+
 
 /* ============ Texto da direita =========== */
 
@@ -257,19 +360,16 @@ main #textinho p{
     color: rgba(255, 255, 255, 0.733);
     margin-top: 10px;
 
-    width: 50%;    
+    max-width: 400px;   
 }
 
 
 #textinho #checkout img{
     width: 23px;
-
 }
 
-
-
 #textinho #frequente{
-
+    
     margin-top: 40px;
 }
 
@@ -278,6 +378,97 @@ main #textinho p{
 }
 
 
-footer{
-    border: 1px solid red;
+@media (max-width: 721px){
+    main h1{
+
+        max-width: 80%;
+        line-height: 2em;
+    }
+}
+
+@media (max-width: 639px){
+
+    main h1{
+        margin-left: 10%;
+    }
+
+    #cabeçalho{
+        font-size: 1rem;
+    }
+
+
+    #botão-try{
+        display: none;
+    }
+
+    #container{
+        flex-direction: column;
+        
+        margin-top: 150px;
+    }
+
+    main #form-email{
+        height: 300px;
+    }
+
+    main #quantity-email{
+        height: 150px;
+
+        width: 90%;
+        
+        
+    }
+
+    main #quantity-email #quantity{
+        width: 80%;
+    }
+
+    main #quantity-email #e-mail{
+        margin-top: 10px;
+    }
+    
+    main #quantity-email #email{
+        width: 84%;
+    }
+
+    main #container-form{
+        margin: 0 auto;
+        
+        width: 80%;
+
+        min-width: 10vh;
+    }
+
+    #textinho{
+        margin-top: 180px;
+    }
+
+    #textinho p{
+        width: 200%;
+    }
+}
+
+@media (max-width: 480px){
+    #cabeçalho{
+        font-size: 60%;
+    }
+
+@media (max-width: 452px){
+    #container{
+        
+        margin-top: 200px;
+    }
+}
+
+
+@media (max-width: 375px){
+    main h1{
+        line-height: 1.5em;
+    }
+
+    #container{
+        
+        margin-top: 300px;
+    }
+        
 }

@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Princing • Get started with IconJar</title>
     <link rel="shortcut icon" href="imagens/favicon32.png" type="image/x-icon">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/modal-container.css">
+    <link rel="stylesheet" href=css/querys.css">
 
 
 
@@ -28,7 +30,6 @@
                     <li><a href="#">Princing</a></li>
                     <li><a href="#" id="botão-try">Try for free</a></li>
                 </ul>
-    
             </div>
     
         </header>
@@ -49,7 +50,6 @@
                         <div id="anually">
                             <input type="radio" id="anu" name="bolinha" checked>
                             <label for="anu" >Anually<p>€29.99 now, then €24.99/year</p></label>
-
                         </div>
 
                         <div id="once">
@@ -60,16 +60,22 @@
                         <div id="upgrading">
                             <input type="checkbox" id="checkbox" onclick="mostrar()">
                             <label for="checkbox">I'm upgrading from IconJar v1</label>
-                            <input type="text" id="inv" class="invisivel">
+                            <input type="text" id="inv" class="invisivel" placeholder="id11234567891odr">
                         </div>
                         
                         <div id="form-email">
-                            <p>Quantity</p>
-                            <p>Email adress</p>
+                            <div id="quantity-email">
+                                <label for="quantity" id="labelQuantity">Quantity</label>
+                                <input type="number" name="" id="quantity">
+                                <label for="email" id="e-mail">Email address</label>
+                                <input type="text" name="" id="email" placeholder="frederique@example.com">
+                            </div>
+                           
+                            <p>By clicking "Buy now", you accept our <a href="https://geticonjar.com/terms-of-use/">terms of use</a> and <a href="https://geticonjar.com/privacy-policy/">privacy policy</a>.</p>
 
+                            <button type="button" id="modalclick" onclick="mostrarModal();">Buy now</button>
                         </div>
                     </div>
-
                 </div>
                 <!-- ============ TEXTO DA DIREITA ============= -->
                 <div id="textinho">
@@ -97,12 +103,29 @@
         </main>
 
     </div>
-
+    <!-- ========= MODAL ========= -->
+    <div class="modal" id="modalPop">
+        <div id="modalBuy" class="modal-container">
+            <button class="fechar-button" onclick="fechar()" >x</button>
+            <div class="modal-content">
+                <img src="imagens/img-modal.png" alt="">
+                <h3>Comprar <span>IconJar 2.0</span></h3>
+                <hr>
+                <input type="text" class="email" placeholder="Endereço de E-mail">
+                <input type="checkbox" id="span-email">
+                <label for="span-email">IconJar pode enviar-me atualizações de produtos e ofertas por email. É possível cancelar a qualquer momento.</label>
+                <p>O seu total é </p>
+                <button type="button">Continuar >></button>
+            </div>
+        </div>
+    </div>
 
 
     <!-- =================== SCRIPTS ===================== -->
     <!-- == Monstrar input text / Mudar Background de Payment method == -->
-    <script src="showInput.js"></script>
+    <script src="/javascript/showInput.js"></script>
+    <!-- == MODAL == -->
+    <script src="/javascript/modal.js"></script>
 
 </body>
 </html>
