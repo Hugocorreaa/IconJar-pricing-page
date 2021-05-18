@@ -25,7 +25,7 @@ body{
     
     color: #EBEBEB;
 
-    height: 150vh;
+    height: 120vh;
 }
 
 
@@ -49,16 +49,23 @@ header{
     padding-left: 2vh;
 }
 
-#cabeçalho ul{
-    display: flex;
+#logo img{
+    width: 100%;
+}
 
+
+#cabeçalho ul{
+
+    display: flex;
 }
 
 #cabeçalho ul li a{
+    border: 1px solid red;
     line-height: 24px;
     font-weight: 600;
-
+    
     padding-right: 2vh;
+
 }
 
 #cabeçalho #botão-try{
@@ -104,8 +111,6 @@ main h3{
 main #container{
     display: flex;
     justify-content:flex-end;
-
-    height: 100vh;
     
 }
 
@@ -378,6 +383,7 @@ main #textinho p{
 }
 
 
+/* =========================== MEDIA QUERIES ========================== */
 @media (max-width: 721px){
     main h1{
 
@@ -403,8 +409,7 @@ main #textinho p{
 
     #container{
         flex-direction: column;
-        
-        margin-top: 150px;
+
     }
 
     main #form-email{
@@ -448,27 +453,9 @@ main #textinho p{
     }
 }
 
-@media (max-width: 480px){
-    #cabeçalho{
-        font-size: 60%;
-    }
-
-@media (max-width: 452px){
-    #container{
-        
-        margin-top: 200px;
-    }
-}
-
 
 @media (max-width: 375px){
     main h1{
         line-height: 1.5em;
-    }
-
-    #container{
-        
-        margin-top: 300px;
-    }
-        
+    }  
 }
